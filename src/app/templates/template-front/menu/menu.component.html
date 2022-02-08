@@ -13,7 +13,7 @@
                         <li><a class="dropdown-item" href="#!">Toutes les categories</a></li>
                         <li><hr class="dropdown-divider" /></li>
 
-                        <li *ngFor="let categorie of categories"><a class="dropdown-item" href="#!">{{categorie.name}}</a></li>
+                        <li *ngFor="let categorie of categories"><a class="dropdown-item" (click)="onLoadView(categorie.id)">{{categorie.name}}</a></li>
                         
                     </ul>
                 </li>
@@ -23,7 +23,7 @@
                 routerLink="/commande/cart" routerLinkActive="active">
                     <i class="bi-cart-fill me-1"></i>
                     Panier
-                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">{{panier.products.length}}</span>
                 </a>
             </form>
         </div>

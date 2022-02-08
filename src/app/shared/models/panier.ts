@@ -4,4 +4,5 @@ import { Users } from "./users";
 export interface Panier {
     client?: Users
     products:Products[]
+    total:number
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/shared/services/product.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private prodServ:ProductService) { }
+  //msg:string="";
   ngOnInit(): void {
+    //this.prodServ.recevoirMessage().subscribe(msg=>this.msg=msg);
   }
 
 }

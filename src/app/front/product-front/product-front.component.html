@@ -7,7 +7,7 @@
                     <!-- Sale badge-->
                     <div *ngIf="product.isSolde" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
                     <!-- Product image-->
-                    <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                    <img class="card-img-top" src="{{product.pathImg}}" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -39,7 +39,7 @@
                         <div class="row">
                             <div class="text-center col-4"><a class="btn btn-sm btn-outline-dark"
                                 routerLink="/product/details/{{product.id}}">Details</a></div>
-                            <div class="text-center col-8"><a class="btn btn-sm btn-outline-dark" href="#">Ajout panier</a></div>
+                            <div class="text-center col-8"><a class="btn btn-sm btn-outline-dark" (click)="onAddToPanier(product)">Ajout panier</a></div>
                         </div>
                         
                     </div>

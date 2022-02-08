@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { filter, map, Observable, of } from 'rxjs';
+import { filter, map, Observable, of, Subject } from 'rxjs';
 import { Products } from '../models/products';
 
 @Injectable({
@@ -22,7 +22,7 @@ export class ProductService {
         id:1,
         name:"Categorie 1"
       },
-      pathImg:""
+      pathImg:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
     },
     {
       id:2,
@@ -37,7 +37,7 @@ export class ProductService {
         id:1,
         name:"Categorie 1"
       },
-      pathImg:""
+      pathImg:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
     },
     {
       id:3,
@@ -52,11 +52,11 @@ export class ProductService {
         id:1,
         name:"Categorie 1"
       },
-      pathImg:""
+      pathImg:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
     },
     {
       id:4,
-      name:"Produit1",
+      name:"Produit4",
       description:"Description du produit 4",
       oldPrice:5000,
       newPrice:0,
@@ -67,7 +67,7 @@ export class ProductService {
         id:2,
         name:"Categorie 2"
       },
-      pathImg:""
+      pathImg:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
     },
     {
       id:5,
@@ -82,7 +82,7 @@ export class ProductService {
         id:2,
         name:"Categorie 2"
       },
-      pathImg:""
+      pathImg:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
     },
     {
       id:6,
@@ -97,7 +97,7 @@ export class ProductService {
         id:2,
         name:"Categorie 2"
       },
-      pathImg:""
+      pathImg:"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
     }
   ]);
 
@@ -119,6 +119,16 @@ export class ProductService {
         return products.filter(product=>product.categorie.id==id)
       })
     )
+  }
+
+  private subject$:Subject<string>=new Subject();
+
+  envoyerMessage(msg:string){
+    this.subject$.next(msg);
+  }
+
+  recevoirMessage():Observable<string>{
+    return this.subject$.asObservable();
   }
   /* 
   private numbers$:Observable<number[]>=of([4,5,6,12]);

@@ -17,5 +17,8 @@ export class AppComponent implements OnInit {
     //this.prodServ.getNumbers().subscribe(numbers=>this.numbers=numbers)
   }
 
+  /* onEnvoiMessage(msg:any){
+    this.prodServ.envoyerMessage(msg);
+  } */
 
 }

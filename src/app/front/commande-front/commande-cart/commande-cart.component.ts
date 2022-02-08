@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Panier } from 'src/app/shared/models/panier';
+import { PanierService } from 'src/app/shared/services/panier.service';
 
 @Component({
   selector: 'app-commande-cart',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommandeCartComponent implements OnInit {
 
-  constructor() { }
+  panier:Panier={
+    products:[],
+    total:0
+  };
+  constructor(private panierServ:PanierService) { }
 
   ngOnInit(): void {
+    this.panierServ.getPanier().subscribe(panier=>this.panier=panier);
   }
 
 }
