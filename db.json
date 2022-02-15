@@ -1,0 +1,86 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Categorie 1"
+    },
+    {
+      "id": 2,
+      "name": "Categorie 2"
+    }
+  ],
+  "products":[
+    {
+      "id":1,
+      "name":"Produit1",
+      "description": "Description du produit 1",
+      "oldPrice":5000,
+      "newPrice":4000,
+      "qteStock":12,
+      "qteSeuil":12,
+      "isSolde":true,
+      "categorieId":1,
+      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+    },
+    {
+      "id":2,
+      "name":"Produit2",
+      "description":"Description du produit 2",
+      "oldPrice":5000,
+      "newPrice":4000,
+      "qteStock":12,
+      "qteSeuil":12,
+      "isSolde":true,
+      "categorieId":1,
+      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+    },
+    {
+      "id":3,
+      "name":"Produit3",
+      "description":"Description du produit 3",
+      "oldPrice":5000,
+      "newPrice":0,
+      "qteStock":12,
+      "qteSeuil":12,
+      "isSolde":false,
+      "categorieId":1,
+      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+    },
+    {
+      "id":4,
+      "name":"Produit4",
+      "description":"Description du produit 4",
+      "oldPrice":5000,
+      "newPrice":0,
+      "qteStock":12,
+      "qteSeuil":12,
+      "isSolde":false,
+      "categorieId":2,
+      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+    },
+    {
+      "id":5,
+      "name":"Produit5",
+      "description":"Description du produit 5",
+      "oldPrice":5000,
+      "newPrice":0,
+      "qteStock":12,
+      "qteSeuil":12,
+      "isSolde":false,
+      "categorieId":2,
+      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
+    },
+    {
+      "id":6,
+      "name":"Produit6",
+      "description":"Description du produit 6",
+      "oldPrice":5000,
+      "newPrice":0,
+      "qteStock":12,
+      "qteSeuil":12,
+      "isSolde":false,
+      "categorieId":2,
+      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
+    }
+  ]
+}

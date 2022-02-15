@@ -12,7 +12,8 @@ import { ProductService } from 'src/app/shared/services/product.service';
 export class ProductDetailsComponent implements OnInit {
 
   constructor(private route:ActivatedRoute,private router:Router,private prodServ:ProductService,
-    private panierServ:PanierService) { }
+  private panierServ:PanierService) { }
+  isNull:boolean=false;
   product:Products|null=null;
   products:Products[]=[];
   message:string="";
@@ -44,13 +45,16 @@ export class ProductDetailsComponent implements OnInit {
     if(qteComde==""||qteComde==0){
       this.isInvalide=true;
       this.message="Veuillez saisir une quantité";
+      this.isNull=true;
     }else{
       if(qteStock<(qteComde as number)){
         this.isInvalide=true;
         this.message="La quantite commandée est indisponible";
+        this.isNull=true;
       }else{
         this.isInvalide=false;
         this.message="";
+        this.isNull=false;
       }
     }
 

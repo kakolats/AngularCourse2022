@@ -17,8 +17,22 @@ export class PanierService {
 
   addProductToPanier(produit:Products,qte:number=1){
     produit.qteCmde=qte;
+    let isExiste=false;
     this.getPanier().pipe(take(1)).subscribe(panier=>{
-      const newProducts:Products[]=[...panier.products,produit];
+      for (const product of panier.products) {
+        if(produit.id==product.id){
+          if(product.qteCmde){
+            console.log(product.qteCmde);
+            console.log(qte);
+            product.qteCmde+=qte;
+            console.log(product.qteCmde);
+          }
+          isExiste=true;
+        }
+      }
+      const newProducts:Products[]=isExiste?panier.products:[...panier.products,produit];
+        
+      
       let price:number=(produit.isSolde?produit.newPrice:produit.oldPrice) as number;
 
       let total=panier.total+price*qte

@@ -13,10 +13,14 @@ export class CommandeCartComponent implements OnInit {
     products:[],
     total:0
   };
+  isEmpty:boolean=true;
   constructor(private panierServ:PanierService) { }
 
   ngOnInit(): void {
-    this.panierServ.getPanier().subscribe(panier=>this.panier=panier);
+    this.panierServ.getPanier().subscribe(panier=>{
+      this.panier=panier
+      this.isEmpty=!(panier.products.length>0);
+    });
   }
 
 }

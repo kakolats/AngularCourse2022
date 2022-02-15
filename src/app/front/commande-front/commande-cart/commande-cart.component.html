@@ -67,13 +67,14 @@
                         <p class="mb-2">Montant TTC</p>
                         <p class="mb-2">{{panier.total+panier.total*0.18}} CFA</p>
                       </div>
-                       <a  class="btn btn-info btn-block btn-lg"
+                       <button  class="btn btn-info btn-block btn-lg"
+                       [disabled]="isEmpty"
                        routerLink="/authentification/login">
                         <div class="d-flex justify-content-between">
                           <span class="mr-2">{{panier.total+panier.total*0.18}} CFA</span>
                           <span class="ml-2">&nbsp;&nbsp;Finaliser la commande <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
                         </div>
-                      </a>
+                      </button>
                      </div>
                   </div>
                  </div>
