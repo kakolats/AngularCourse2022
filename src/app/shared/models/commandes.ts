@@ -7,6 +7,7 @@ export interface Commandes {
     mntTotal:number
     isPayed:boolean
     isLivred:boolean
-    client : Users
+    clientId:number|undefined
+    client : Users|null
     products :Products[]
 }

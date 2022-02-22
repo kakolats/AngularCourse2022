@@ -82,5 +82,174 @@
       "categorieId":2,
       "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
     }
+  ],
+  "users":[
+    {
+      "id":1,
+      "nomComplet":"fulbert gato junior ADANHODOU",
+      "login":"admin@gmail.com",
+      "password":"1234",
+      "role":"ROLE_ADMIN",
+      "token":"",
+      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp"
+    },
+    {
+      "id":2,
+      "nomComplet":"Esse Jacques DANSOMON",
+      "login":"client1@gmail.com",
+      "password":"1234",
+      "role":"ROLE_CLIENT",
+      "token":"",
+      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
+    },
+    {
+      "id":3,
+      "nomComplet":"Ndeye Arame MBAYE",
+      "login":"client2@gmail.com",
+      "password":"1234",
+      "role":"ROLE_CLIENT",
+      "token":"",
+      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+    },
+    {
+      "id":4,
+      "nomComplet":"Edson Arantes do Nascimento dit PELE",
+      "login":"client3@gmail.com",
+      "password":"1234",
+      "role":"ROLE_CLIENT",
+      "token":"",
+      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-7.webp"
+    }
+  ],
+  "commandes":[
+    {
+      "id:":1,
+      "date":"22-02-2022 15:00:00",
+      "mntTotal":250000,
+      "isPayed":false,
+      "isLivred":false,
+      "clientId":4,
+      "client" : {
+        "id":4,
+        "nomComplet":"Edson Arantes do Nascimento dit PELE",
+        "login":"client3@gmail.com",
+        "password":"1234",
+        "role":"ROLE_CLIENT",
+        "token":"",
+        "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-7.webp"
+      },
+      "products" :[
+        {
+          "id":1,
+          "name":"Produit1",
+          "description": "Description du produit 1",
+          "oldPrice":5000,
+          "newPrice":4000,
+          "qteStock":12,
+          "qteSeuil":12,
+          "isSolde":true,
+          "categorieId":1,
+          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+        },
+        {
+          "id":2,
+          "name":"Produit2",
+          "description":"Description du produit 2",
+          "oldPrice":5000,
+          "newPrice":4000,
+          "qteStock":12,
+          "qteSeuil":12,
+          "isSolde":true,
+          "categorieId":1,
+          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+        }
+      ]
+    },
+    {
+      "id:":2,
+      "date":"22-02-2022 16:00:00",
+      "mntTotal":250000,
+      "isPayed":false,
+      "isLivred":false,
+      "clientId":2,
+      "client" : {
+        "id":2,
+        "nomComplet":"Esse Jacques DANSOMON",
+        "login":"client1@gmail.com",
+        "password":"1234",
+        "role":"ROLE_CLIENT",
+        "token":"",
+        "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
+      },
+      "products" :[
+        {
+          "id":1,
+          "name":"Produit1",
+          "description": "Description du produit 1",
+          "oldPrice":5000,
+          "newPrice":4000,
+          "qteStock":12,
+          "qteSeuil":12,
+          "isSolde":true,
+          "categorieId":1,
+          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+        },
+        {
+          "id":2,
+          "name":"Produit2",
+          "description":"Description du produit 2",
+          "oldPrice":5000,
+          "newPrice":4000,
+          "qteStock":12,
+          "qteSeuil":12,
+          "isSolde":true,
+          "categorieId":1,
+          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+        }
+      ]
+    },
+    {
+      "id:":3,
+      "date":"22-02-2022 17:00:00",
+      "mntTotal":250000,
+      "isPayed":false,
+      "isLivred":false,
+      "clientId":3,
+      "client" : {
+        "id":3,
+        "nomComplet":"Ndeye Arame MBAYE",
+        "login":"client2@gmail.com",
+        "password":"1234",
+        "role":"ROLE_CLIENT",
+        "token":"",
+        "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+      },
+      "products" :[
+        {
+          "id":1,
+          "name":"Produit1",
+          "description": "Description du produit 1",
+          "oldPrice":5000,
+          "newPrice":4000,
+          "qteStock":12,
+          "qteSeuil":12,
+          "isSolde":true,
+          "categorieId":1,
+          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+        },
+        {
+          "id":2,
+          "name":"Produit2",
+          "description":"Description du produit 2",
+          "oldPrice":5000,
+          "newPrice":4000,
+          "qteStock":12,
+          "qteSeuil":12,
+          "isSolde":true,
+          "categorieId":1,
+          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+        }
+      ]
+    }
   ]
 }

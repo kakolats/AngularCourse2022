@@ -7,19 +7,52 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
                             <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
                             <div class="card-body">
-                                <form>
+                                <form method="POST" name="form" 
+                                #loginForm="ngForm"
+                                novalidate
+                                (ngSubmit)="loginForm.form.valid && onFormSubmit()">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com"
+                                        name="login"
+                                        #login="ngModel" 
+                                        [(ngModel)]="model.login" 
+                                        required
+                                        minlength="6" 
+                                        [ngClass]="
+                                        {
+                                            'is-valid':login.valid && (login.touched||login.dirty),
+                                            'is-invalid':login.invalid && (login.touched||login.dirty)
+                                        }"
+                                        />
                                         <label for="inputEmail">Email address</label>
+                                        <div class="text-danger mt-2" *ngIf="login.errors && (login.touched||login.dirty)">
+                                            <span *ngIf="login.errors['required']">Le champ est obligatoire</span>
+                                            <span *ngIf="login.errors['minlength']">Le champ requiert au moins 6 caractères</span>
+                                        </div>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                                        <input class="form-control" id="inputPassword" type="password" placeholder="Password"
+                                        name="password"
+                                        #password="ngModel"
+                                        [(ngModel)]="model.password" 
+                                        required
+                                        minlength="4"
+                                        maxlength="10"
+                                        [ngClass]="
+                                        {
+                                            'is-valid':password.valid && (password.touched||password.dirty),
+                                            'is-invalid':password.invalid && (password.touched||password.dirty)
+                                        }"/>
                                         <label for="inputPassword">Password</label>
+                                        <div class="text-danger mt-2" *ngIf="password.errors && (password.touched||password.dirty)">
+                                            <span *ngIf="password.errors['required']">Le champ est obligatoire</span>
+                                            <span *ngIf="password.errors['minlength']">Le champ requiert au moins 4 caractères et au plus 10</span>
+                                        </div>
                                     </div>
                                    
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="#"></a>
-                                        <a class="btn btn-primary" href="index.html">Login</a>
+                                        <button class="btn btn-primary" [disabled]="loginForm.form.invalid">Login</button>
                                     </div>
                                 </form>
                             </div>

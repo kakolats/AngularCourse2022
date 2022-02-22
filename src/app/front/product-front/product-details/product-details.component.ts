@@ -20,7 +20,7 @@ export class ProductDetailsComponent implements OnInit {
   isInvalide:boolean=false;
   ngOnInit(): void {
     let idProduct=this.route.snapshot.params["id"];
-    this.prodServ.getProduitsById(idProduct).subscribe(products=>this.product=products[0]);
+    this.prodServ.getProduitsById(idProduct).subscribe(products=>this.product=products);
     //this.route.navigateByUrl("/commande/cart");
     let idCat:any=this.product?.categorie.id;
     this.prodServ.getProduitsByCategorie(idCat).subscribe(products=>{
