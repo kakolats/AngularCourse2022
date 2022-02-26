@@ -9,247 +9,214 @@
       "name": "Categorie 2"
     }
   ],
-  "products":[
+  "products": [
     {
-      "id":1,
-      "name":"Produit1",
+      "id": 1,
+      "name": "Produit1",
       "description": "Description du produit 1",
-      "oldPrice":5000,
-      "newPrice":4000,
-      "qteStock":12,
-      "qteSeuil":12,
-      "isSolde":true,
-      "categorieId":1,
-      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+      "oldPrice": 5000,
+      "newPrice": 4000,
+      "qteStock": 12,
+      "qteSeuil": 12,
+      "isSolde": true,
+      "categorieId": 1,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
     },
     {
-      "id":2,
-      "name":"Produit2",
-      "description":"Description du produit 2",
-      "oldPrice":5000,
-      "newPrice":4000,
-      "qteStock":12,
-      "qteSeuil":12,
-      "isSolde":true,
-      "categorieId":1,
-      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+      "id": 2,
+      "name": "Produit2",
+      "description": "Description du produit 2",
+      "oldPrice": 5000,
+      "newPrice": 4000,
+      "qteStock": 12,
+      "qteSeuil": 12,
+      "isSolde": true,
+      "categorieId": 1,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
     },
     {
-      "id":3,
-      "name":"Produit3",
-      "description":"Description du produit 3",
-      "oldPrice":5000,
-      "newPrice":0,
-      "qteStock":12,
-      "qteSeuil":12,
-      "isSolde":false,
-      "categorieId":1,
-      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+      "id": 3,
+      "name": "Produit3",
+      "description": "Description du produit 3",
+      "oldPrice": 5000,
+      "newPrice": 0,
+      "qteStock": 12,
+      "qteSeuil": 12,
+      "isSolde": false,
+      "categorieId": 1,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
     },
     {
-      "id":4,
-      "name":"Produit4",
-      "description":"Description du produit 4",
-      "oldPrice":5000,
-      "newPrice":0,
-      "qteStock":12,
-      "qteSeuil":12,
-      "isSolde":false,
-      "categorieId":2,
-      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+      "id": 4,
+      "name": "Produit4",
+      "description": "Description du produit 4",
+      "oldPrice": 5000,
+      "newPrice": 0,
+      "qteStock": 12,
+      "qteSeuil": 12,
+      "isSolde": false,
+      "categorieId": 2,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
     },
     {
-      "id":5,
-      "name":"Produit5",
-      "description":"Description du produit 5",
-      "oldPrice":5000,
-      "newPrice":0,
-      "qteStock":12,
-      "qteSeuil":12,
-      "isSolde":false,
-      "categorieId":2,
-      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
+      "id": 5,
+      "name": "Produit5",
+      "description": "Description du produit 5",
+      "oldPrice": 5000,
+      "newPrice": 0,
+      "qteStock": 12,
+      "qteSeuil": 12,
+      "isSolde": false,
+      "categorieId": 2,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img5.webp"
     },
     {
-      "id":6,
-      "name":"Produit6",
-      "description":"Description du produit 6",
-      "oldPrice":5000,
-      "newPrice":0,
-      "qteStock":12,
-      "qteSeuil":12,
-      "isSolde":false,
-      "categorieId":2,
-      "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
+      "id": 6,
+      "name": "Produit6",
+      "description": "Description du produit 6",
+      "oldPrice": 5000,
+      "newPrice": 0,
+      "qteStock": 12,
+      "qteSeuil": 12,
+      "isSolde": false,
+      "categorieId": 2,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
     }
   ],
-  "users":[
+  "users": [
     {
-      "id":1,
-      "nomComplet":"fulbert gato junior ADANHODOU",
-      "login":"admin@gmail.com",
-      "password":"1234",
-      "role":"ROLE_ADMIN",
-      "token":"",
-      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp"
+      "id": 1,
+      "nomComplet": "fulbert gato junior ADANHODOU",
+      "login": "admin@gmail.com",
+      "password": "1234",
+      "role": "ROLE_ADMIN",
+      "token": "",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-4.webp"
     },
     {
-      "id":2,
-      "nomComplet":"Esse Jacques DANSOMON",
-      "login":"client1@gmail.com",
-      "password":"1234",
-      "role":"ROLE_CLIENT",
-      "token":"",
-      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
+      "id": 2,
+      "nomComplet": "Esse Jacques DANSOMON",
+      "login": "client1@gmail.com",
+      "password": "1234",
+      "role": "ROLE_CLIENT",
+      "token": "",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
     },
     {
-      "id":3,
-      "nomComplet":"Ndeye Arame MBAYE",
-      "login":"client2@gmail.com",
-      "password":"1234",
-      "role":"ROLE_CLIENT",
-      "token":"",
-      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+      "id": 3,
+      "nomComplet": "Ndeye Arame MBAYE",
+      "login": "client2@gmail.com",
+      "password": "1234",
+      "role": "ROLE_CLIENT",
+      "token": "",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
     },
     {
-      "id":4,
-      "nomComplet":"Edson Arantes do Nascimento dit PELE",
-      "login":"client3@gmail.com",
-      "password":"1234",
-      "role":"ROLE_CLIENT",
-      "token":"",
-      "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-7.webp"
+      "id": 4,
+      "nomComplet": "Edson Arantes do Nascimento dit PELE",
+      "login": "client3@gmail.com",
+      "password": "1234",
+      "role": "ROLE_CLIENT",
+      "token": "",
+      "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-7.webp"
     }
   ],
-  "commandes":[
+  "commandes": [
     {
-      "id:":1,
-      "date":"22-02-2022 15:00:00",
-      "mntTotal":250000,
-      "isPayed":false,
-      "isLivred":false,
-      "clientId":4,
-      "client" : {
-        "id":4,
-        "nomComplet":"Edson Arantes do Nascimento dit PELE",
-        "login":"client3@gmail.com",
-        "password":"1234",
-        "role":"ROLE_CLIENT",
-        "token":"",
-        "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-7.webp"
+      "date": "20-02-2022",
+      "mntTotal": 4000,
+      "isPayed": true,
+      "isLivred": true,
+      "clientId": 2,
+      "client": {
+        "id": 2,
+        "nomComplet": "Esse Jacques DANSOMON",
+        "login": "client1@gmail.com",
+        "password": "1234",
+        "role": "ROLE_CLIENT",
+        "token": "",
+        "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
       },
-      "products" :[
+      "products": [
         {
-          "id":1,
-          "name":"Produit1",
+          "id": 1,
+          "name": "Produit1",
           "description": "Description du produit 1",
-          "oldPrice":5000,
-          "newPrice":4000,
-          "qteStock":12,
-          "qteSeuil":12,
-          "isSolde":true,
-          "categorieId":1,
-          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-        },
-        {
-          "id":2,
-          "name":"Produit2",
-          "description":"Description du produit 2",
-          "oldPrice":5000,
-          "newPrice":4000,
-          "qteStock":12,
-          "qteSeuil":12,
-          "isSolde":true,
-          "categorieId":1,
-          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+          "oldPrice": 5000,
+          "newPrice": 4000,
+          "qteStock": 12,
+          "qteSeuil": 12,
+          "isSolde": true,
+          "categorieId": 1,
+          "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp",
+          "qteCmde": 1
         }
-      ]
+      ],
+      "id": 1
     },
     {
-      "id:":2,
-      "date":"22-02-2022 16:00:00",
-      "mntTotal":250000,
-      "isPayed":false,
-      "isLivred":false,
-      "clientId":2,
-      "client" : {
-        "id":2,
-        "nomComplet":"Esse Jacques DANSOMON",
-        "login":"client1@gmail.com",
-        "password":"1234",
-        "role":"ROLE_CLIENT",
-        "token":"",
-        "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
+      "date": "22-02-2022",
+      "mntTotal": 4000,
+      "isPayed": true,
+      "isLivred": false,
+      "clientId": 2,
+      "client": {
+        "id": 2,
+        "nomComplet": "Esse Jacques DANSOMON",
+        "login": "client1@gmail.com",
+        "password": "1234",
+        "role": "ROLE_CLIENT",
+        "token": "",
+        "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
       },
-      "products" :[
+      "products": [
         {
-          "id":1,
-          "name":"Produit1",
-          "description": "Description du produit 1",
-          "oldPrice":5000,
-          "newPrice":4000,
-          "qteStock":12,
-          "qteSeuil":12,
-          "isSolde":true,
-          "categorieId":1,
-          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-        },
-        {
-          "id":2,
-          "name":"Produit2",
-          "description":"Description du produit 2",
-          "oldPrice":5000,
-          "newPrice":4000,
-          "qteStock":12,
-          "qteSeuil":12,
-          "isSolde":true,
-          "categorieId":1,
-          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+          "id": 2,
+          "name": "Produit2",
+          "description": "Description du produit 2",
+          "oldPrice": 5000,
+          "newPrice": 4000,
+          "qteStock": 12,
+          "qteSeuil": 12,
+          "isSolde": true,
+          "categorieId": 1,
+          "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp",
+          "qteCmde": 1
         }
-      ]
+      ],
+      "id": 2
     },
     {
-      "id:":3,
-      "date":"22-02-2022 17:00:00",
-      "mntTotal":250000,
-      "isPayed":false,
-      "isLivred":false,
-      "clientId":3,
-      "client" : {
-        "id":3,
-        "nomComplet":"Ndeye Arame MBAYE",
-        "login":"client2@gmail.com",
-        "password":"1234",
-        "role":"ROLE_CLIENT",
-        "token":"",
-        "avatar":"https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+      "date": "26-02-2022",
+      "mntTotal": 5000,
+      "isPayed": false,
+      "isLivred": false,
+      "clientId": 2,
+      "client": {
+        "id": 2,
+        "nomComplet": "Esse Jacques DANSOMON",
+        "login": "client1@gmail.com",
+        "password": "1234",
+        "role": "ROLE_CLIENT",
+        "token": "",
+        "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp"
       },
-      "products" :[
+      "products": [
         {
-          "id":1,
-          "name":"Produit1",
-          "description": "Description du produit 1",
-          "oldPrice":5000,
-          "newPrice":4000,
-          "qteStock":12,
-          "qteSeuil":12,
-          "isSolde":true,
-          "categorieId":1,
-          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
-        },
-        {
-          "id":2,
-          "name":"Produit2",
-          "description":"Description du produit 2",
-          "oldPrice":5000,
-          "newPrice":4000,
-          "qteStock":12,
-          "qteSeuil":12,
-          "isSolde":true,
-          "categorieId":1,
-          "pathImg":"https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+          "id": 3,
+          "name": "Produit3",
+          "description": "Description du produit 3",
+          "oldPrice": 5000,
+          "newPrice": 0,
+          "qteStock": 12,
+          "qteSeuil": 12,
+          "isSolde": false,
+          "categorieId": 1,
+          "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp",
+          "qteCmde": 1
         }
-      ]
+      ],
+      "id": 3
     }
   ]
 }

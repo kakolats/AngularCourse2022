@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Panier } from '../../models/panier';
 import { Users } from '../../models/users';
 import { AuthentificationService } from '../../services/authentification.service';
 import { CommandeService } from '../../services/commande.service';
@@ -11,30 +12,37 @@ import { PanierService } from '../../services/panier.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
+  private panier:null|Panier=null;
   model:Users={
     login:"",
     password:""
   };
   page:string="";
   constructor(private route:ActivatedRoute,private authServ:AuthentificationService,
-    private comServ:CommandeService,private panierServ:PanierService) { }
+    private comServ:CommandeService,private panierServ:PanierService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params=>this.page=params["page"]);
+    this.panierServ.getPanier().subscribe(panier=>this.panier=panier);
   }
 
   onFormSubmit(){
+    
     this.authServ.getUserLoginAndPassword(this.model).subscribe(users=>{
-      if(users.length>0){
+      if(users.length>0){  
         if(this.page=="commande"){
-          this.panierServ.getPanier().subscribe(panier=>{
-            this.comServ.addCommande(panier);
-          })
-          
+          if(this.panier){
+            this.comServ.addCommande(this.panier).subscribe(commande=>{
+              console.log(commande.id);
+              this.panierServ.clearPanier();
+            });            
+          }
+            
         }
+        this.router.navigateByUrl("/commande");
       }
+      
     })
-    console.log(this.model);
   }
 }

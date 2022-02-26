@@ -7,134 +7,79 @@
                <div class="row">
                  <div class="col-lg-7">
                   <h5 class="mb-3"><a href="#!" class="text-body"><i
-                        class="fas fa-long-arrow-alt-left me-2"></i>Commande du Client </a></h5>
+                        class="fas fa-long-arrow-alt-left me-2"></i>Commandes du Client </a></h5>
                   <hr>
                    <div class="d-flex justify-content-between align-items-center mb-4">
                     <div>
-                      <p class="mb-1">Shopping cart</p>
-                      <p class="mb-0">You have 4 items in your cart</p>
+                      <p class="mb-1">{{user?.nomComplet}}</p>
+                      <p class="mb-0">Vous avez {{commandes.length}} commande(s)</p>
                     </div>
                     <div>
-                      <p class="mb-0"><span class="text-muted">Sort by:</span> <a href="#!"
-                          class="text-body">price <i class="fas fa-angle-down mt-1"></i></a></p>
+                      <p class="mb-0"><span class="text-muted">
+                        Du <input type="date" name="" id=""> Au <input type="date" name="" id="">
+                      </span> </p>
                     </div>
                   </div>
-                   <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-row align-items-center">
-                        
-                          <div class="ms-3">
-                            <h5>Iphone 11 pro</h5>
-                            <p class="small mb-0">256GB, Navy Blue</p>
+                  <ng-container *ngIf="commandes.length>0; then haveComs else noComs"></ng-container>
+                  <ng-template #haveComs>
+                    <div class="card mb-3" *ngFor="let commande of commandes">
+                      <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                          <div class="d-flex flex-row align-items-center">
+                          
+                            <div class="ms-3">
+                              <h5>Commande du :{{commande.date}} <button type="button" class="btn btn-outline-warning" (click)="onComDetails(commande?.id)">Details</button></h5>
+                              <p class="small mb-0">
+                                <button type="button" class="btn " [ngClass]="{'btn-outline-success':commande.isPayed,'btn-outline-danger':!commande.isPayed}"
+                                 [disabled]="commande.isPayed" style="margin-right:5px">
+                                 <span *ngIf="!commande.isPayed"  (click)="onChangeStatus('payement',commande)">A Payer</span>
+                                 <span *ngIf="commande.isPayed">Payé</span>
+                                </button>
+
+                                <button type="button" class="btn btn-outline-danger" [ngClass]="{'btn-outline-success':commande.isLivred,'btn-outline-danger':!commande.isLivred}"
+                                [disabled]="commande.isLivred" (click)="onChangeStatus('livraison',commande)"
+                                ><span *ngIf="!commande.isLivred">A Livrer</span><span *ngIf="commande.isLivred">Livré</span></button>
+                              </p>
+                            </div>
                           </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center">
-                          <div style="width: 50px;">
-                            <h5 class="fw-normal mb-0">2</h5>
+                          <div class="d-flex flex-row align-items-center">
+                            <div style="width: 50px;">
+                              <h5 class="fw-normal mb-0"></h5>
+                            </div>
+                            <div style="width: 120px;">
+                              <h5 class="mb-0">{{commande.mntTotal}}</h5>
+                            </div>
+                            <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
                           </div>
-                          <div style="width: 80px;">
-                            <h5 class="mb-0">$900</h5>
-                          </div>
-                          <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
                         </div>
                       </div>
                     </div>
-                  </div>
-                   <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-row align-items-center">
-                         
-                          <div class="ms-3">
-                            <h5>Samsung galaxy Note 10 </h5>
-                            <p class="small mb-0">256GB, Navy Blue</p>
-                          </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center">
-                          <div style="width: 50px;">
-                            <h5 class="fw-normal mb-0">2</h5>
-                          </div>
-                          <div style="width: 80px;">
-                            <h5 class="mb-0">$900</h5>
-                          </div>
-                          <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                   <div class="card mb-3">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-row align-items-center">
-                         
-                          <div class="ms-3">
-                            <h5>Canon EOS M50</h5>
-                            <p class="small mb-0">Onyx Black</p>
-                          </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center">
-                          <div style="width: 50px;">
-                            <h5 class="fw-normal mb-0">1</h5>
-                          </div>
-                          <div style="width: 80px;">
-                            <h5 class="mb-0">$1199</h5>
-                          </div>
-                          <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                   <div class="card mb-3 mb-lg-0">
-                    <div class="card-body">
-                      <div class="d-flex justify-content-between">
-                        <div class="d-flex flex-row align-items-center">
-                         
-                          <div class="ms-3">
-                            <h5>MacBook Pro</h5>
-                            <p class="small mb-0">1TB, Graphite</p>
-                          </div>
-                        </div>
-                        <div class="d-flex flex-row align-items-center">
-                          <div style="width: 50px;">
-                            <h5 class="fw-normal mb-0">1</h5>
-                          </div>
-                          <div style="width: 80px;">
-                            <h5 class="mb-0">$1799</h5>
-                          </div>
-                          <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  </ng-template>
+                  <ng-template #noComs>
+                    <span class="text-danger">Vous n'avez pas de commande actuellement :(</span>
+                  </ng-template>
+                  
                  </div>
                 <div class="col-lg-5">
                    <div class="card bg-light text-dark rounded-3 h-100">
-                    <div class="card-body">
+                    <div class="card-body" *ngIf="commandeId">
                         <div class="d-flex justify-content-between align-items-center mb-4">
                             <h5 class="mb-0">Details Commande</h5>
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                            <img [src]="commandeId?.client?.avatar"
                               class="img-fluid rounded-3" style="width: 45px;" alt="Avatar">
                           </div>
   
-                       <div class="d-flex justify-content-between">
-                          <p class="mb-2">Subtotal</p>
-                          <p class="mb-2">$4798.00</p>
+
+                       <div class="d-flex justify-content-between" *ngFor="let product of commandeId?.products">
+                          <p class="mb-2">{{product.name}}</p>
+                          <p class="mb-2">{{product.oldPrice}}</p>
                       </div>
-                       <div class="d-flex justify-content-between">
-                        <p class="mb-2">Shipping</p>
-                        <p class="mb-2">$20.00</p>
-                      </div>
+                       
                        <div class="d-flex justify-content-between mb-4">
-                        <p class="mb-2">Total(Incl. taxes)</p>
-                        <p class="mb-2">$4818.00</p>
+                        <p class="mb-2">Total (TTC)</p>
+                        <p class="mb-2">{{commandeId?.mntTotal}}</p>
                       </div>
-                       <button type="button" class="btn btn-info btn-block btn-lg">
-                        <div class="d-flex justify-content-between">
-                          <span>$4818.00</span>
-                          <span>Checkout <i class="fas fa-long-arrow-alt-right ms-2"></i></span>
-                        </div>
-                      </button>
+                       
                      </div>
                   </div>
                  </div>

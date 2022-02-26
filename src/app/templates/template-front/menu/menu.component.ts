@@ -32,5 +32,10 @@ export class MenuComponent implements OnInit {
     this.router.navigateByUrl("/product/categories/"+idCat);
     
   }
+  onLogout(){
+    this.authServ.logout();
+    this.authServ.isLogin.next(false);
+    this.router.navigateByUrl("/product");
+  }
 
 }

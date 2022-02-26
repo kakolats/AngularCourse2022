@@ -15,7 +15,7 @@ export class CommandeService {
 
   addCommande(panier:Panier):Observable<Commandes>{
     const commande:Commandes={
-    date:new Date().toLocaleString(),
+    date:new Date().toLocaleDateString().split("/").join("-"),
     mntTotal:panier.total,
     isPayed:false,
     isLivred:false,
@@ -23,6 +23,7 @@ export class CommandeService {
     client : this.authServ.getUserStorage(),
     products :panier.products
     }
+    console.log(JSON.stringify(commande));
     return this.http.post<Commandes>(APIURL,commande);
   }
 
@@ -32,5 +33,13 @@ export class CommandeService {
 
   getCommandesByClient(idClient:number):Observable<Commandes[]>{
     return this.http.get<Commandes[]>(`${APIURL}?clientId=${idClient}`);
+  }
+
+  getCommandeById(idCom:number):Observable<Commandes>{
+    return this.http.get<Commandes>(`${APIURL}/${idCom}`);
+  }
+
+  updateCommande(commande:Commandes):Observable<Commandes>{
+    return this.http.put<Commandes>(`${APIURL}/${commande.id}`,commande);
   }
 }

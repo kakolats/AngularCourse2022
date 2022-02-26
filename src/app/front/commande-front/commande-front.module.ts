@@ -6,6 +6,7 @@ import { CommandeFrontComponent } from './commande-front.component';
 import { CommandeCartComponent } from './commande-cart/commande-cart.component';
 import { CommandeListByDateComponent } from './commande-list-by-date/commande-list-by-date.component';
 import { CommandeAddComponent } from './commande-add/commande-add.component';
+import { FiltreMoneyPipe } from 'src/app/shared/pipes/filtre-money.pipe';
 
 
 
@@ -14,11 +15,11 @@ import { CommandeAddComponent } from './commande-add/commande-add.component';
     CommandeFrontComponent,
     CommandeCartComponent,
     CommandeListByDateComponent,
-    CommandeAddComponent
+    CommandeAddComponent,
   ],
   imports: [
     CommonModule,
-    CommandeFrontRoutingModule
+    CommandeFrontRoutingModule,
   ]
 })
 export class CommandeFrontModule { }
