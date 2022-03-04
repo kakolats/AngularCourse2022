@@ -16,13 +16,13 @@
                     </div>
                     <div>
                       <p class="mb-0"><span class="text-muted">
-                        Du <input type="date" name="" id=""> Au <input type="date" name="" id="">
+                        Du <input type="date" name="" id="" [(ngModel)]="start"> Au <input type="date" name="" id="" [(ngModel)]="end">
                       </span> </p>
                     </div>
                   </div>
                   <ng-container *ngIf="commandes.length>0; then haveComs else noComs"></ng-container>
                   <ng-template #haveComs>
-                    <div class="card mb-3" *ngFor="let commande of commandes">
+                    <div class="card mb-3" *ngFor="let commande of commandes|dateFilter:start:end">
                       <div class="card-body">
                         <div class="d-flex justify-content-between">
                           <div class="d-flex flex-row align-items-center">
@@ -47,7 +47,7 @@
                               <h5 class="fw-normal mb-0"></h5>
                             </div>
                             <div style="width: 120px;">
-                              <h5 class="mb-0">{{commande.mntTotal}}</h5>
+                              <h5 class="mb-0">{{commande.mntTotal|filter:"Euros"}}</h5>
                             </div>
                             <a href="#!" style="color: #cecece;"><i class="fas fa-trash-alt"></i></a>
                           </div>

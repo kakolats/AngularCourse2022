@@ -7,33 +7,70 @@
                         <div class="card shadow-lg border-0 rounded-lg mt-5">
                             <div class="card-header"><h3 class="text-center font-weight-light my-4">Register</h3></div>
                             <div class="card-body">
-                                <form>
+                                <form method="POST" [formGroup]="model"
+                                (ngSubmit)="model.valid && onFormSubmit()">
                                     <div class="row">
                                        <div class="col-6">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="text" placeholder="" />
+                                                <input class="form-control" id="inputEmail" type="text" placeholder=""
+                                                formControlName="nomComplet"
+                                                [ngClass]="{
+                                                    'is-valid':model.get('nomComplet').valid && (model.get('nomComplet').touched||model.get('nomComplet').dirty),
+                                                    'is-invalid':model.get('nomComplet').invalid && (model.get('nomComplet').touched||model.get('nomComplet').dirty)
+                                                }">
                                                 <label for="inputEmail">Nom et Prenom</label>
+                                                <div class="text-danger mt-2" *ngIf="model.get('nomComplet').invalid && (model.get('nomComplet').touched||model.get('nomComplet').dirty)">
+                                                    <span *ngIf="model.get('nomComplet').errors['required']">Le champ est obligatoire</span>
+                                                    <span *ngIf="model.get('nomComplet').errors['minlength']">Le champ requiert au moins 8 caractères</span>
+                                                </div>
                                             </div>
                                        </div>
                                        <div class="col-6">
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="text" placeholder="" />
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="" 
+                                                formControlName="telephone"
+                                                [ngClass]="{
+                                                    'is-valid':model.get('telephone').valid && (model.get('telephone').touched||model.get('telephone').dirty),
+                                                    'is-invalid':model.get('telephone').invalid && (model.get('telephone').touched||model.get('telephone').dirty)
+                                                }" />
                                                 <label for="inputEmail">Telephone</label>
+                                                <div class="text-danger mt-2" *ngIf="model.get('telephone').invalid && (model.get('telephone').touched||model.get('telephone').dirty)">
+                                                    <span *ngIf="model.get('telephone').errors['required']">Le champ est obligatoire</span>
+                                                    <span *ngIf="model.get('telephone').errors['minlength']">Le champ requiert au moins 9 caractères</span>
+                                                </div>
                                             </div>
                                        </div> 
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" 
+                                        formControlName="login" 
+                                        [ngClass]="{
+                                                'is-valid':model.get('login').valid && (model.get('login').touched||model.get('login').dirty),
+                                                'is-invalid':model.get('login').invalid && (model.get('login').touched||model.get('login').dirty)
+                                        }"/>
                                         <label for="inputEmail">Email address</label>
+                                        <div class="text-danger mt-2" *ngIf="model.get('login').invalid && (model.get('login').touched||model.get('login').dirty)">
+                                            <span *ngIf="model.get('login').errors['required']">Le champ est obligatoire</span>
+                                            <span *ngIf="model.get('login').errors['minlength']">Le champ requiert au moins 9 caractères</span>
+                                        </div>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                                        <input class="form-control" id="inputPassword" type="password" placeholder="Password"
+                                        formControlName="password" 
+                                        [ngClass]="{
+                                            'is-valid':model.get('password').valid && (model.get('password').touched||model.get('password').dirty),
+                                            'is-invalid':model.get('password').invalid && (model.get('password').touched||model.get('password').dirty)
+                                        }" />
                                         <label for="inputPassword">Password</label>
+                                        <div class="text-danger mt-2" *ngIf="model.get('password').invalid && (model.get('password').touched||model.get('password').dirty)">
+                                            <span *ngIf="model.get('password').errors['required']">Le champ est obligatoire</span>
+                                            <span *ngIf="model.get('password').errors['minlength']">Le champ requiert au moins 9 caractères</span>
+                                        </div>
                                     </div>
                                    
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="#"></a>
-                                        <a class="btn btn-primary" href="index.html">Register</a>
+                                        <button class="btn btn-primary" type="submit" [disabled]="model.invalid" >Register</button>
                                     </div>
                                 </form>
                             </div>

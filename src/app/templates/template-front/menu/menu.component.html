@@ -25,6 +25,12 @@
                     Se connecter
                     </a>
                 </li>
+                <li class="nav-item" *ngIf="!isLogin">
+                    <a class="nav-link active" [routerLink]="['/authentification/register']" 
+                     aria-current="page">
+                    S'inscrire
+                    </a>
+                </li>
 
                 <li class="nav-item" *ngIf="isLogin">
                     <a class="nav-link active" aria-current="page"

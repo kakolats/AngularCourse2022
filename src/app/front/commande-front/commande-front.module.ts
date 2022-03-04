@@ -6,7 +6,9 @@ import { CommandeFrontComponent } from './commande-front.component';
 import { CommandeCartComponent } from './commande-cart/commande-cart.component';
 import { CommandeListByDateComponent } from './commande-list-by-date/commande-list-by-date.component';
 import { CommandeAddComponent } from './commande-add/commande-add.component';
-import { FiltreMoneyPipe } from 'src/app/shared/pipes/filtre-money.pipe';
+import { FilterMoneyPipe } from 'src/app/shared/pipes/filter-money.pipe';
+import { DateFilterPipe } from 'src/app/shared/pipes/date-filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,10 +18,13 @@ import { FiltreMoneyPipe } from 'src/app/shared/pipes/filtre-money.pipe';
     CommandeCartComponent,
     CommandeListByDateComponent,
     CommandeAddComponent,
+    FilterMoneyPipe, 
+    DateFilterPipe,
   ],
   imports: [
     CommonModule,
     CommandeFrontRoutingModule,
+    FormsModule
   ]
 })
 export class CommandeFrontModule { }

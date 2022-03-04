@@ -6,13 +6,12 @@ import { AppComponent } from './app.component';
 import { TemplateFrontModule } from './templates/template-front/template-front.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { FormsModule } from '@angular/forms';
-import { FiltreMoneyPipe } from './shared/pipes/filtre-money.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
-    FiltreMoneyPipe
+    PageNotFoundComponent,   
   ],
   imports: [
     BrowserModule,
@@ -22,7 +21,7 @@ import { FiltreMoneyPipe } from './shared/pipes/filtre-money.pipe';
     HttpClientModule,
   ],
   exports: [
-    FiltreMoneyPipe,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

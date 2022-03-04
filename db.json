@@ -119,6 +119,14 @@
       "role": "ROLE_CLIENT",
       "token": "",
       "avatar": "https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-7.webp"
+    },
+    {
+      "nomComplet": "Dio brando",
+      "telephone": "778784545",
+      "login": "dio@gmail.com",
+      "password": "12345678",
+      "role": "ROLE_CLIENT",
+      "id": 5
     }
   ],
   "commandes": [

@@ -31,4 +31,8 @@ export class AuthentificationService {
   getUserStorage():Users|null{
     return this.stoServ.getUser();
   }
+
+  addUser(user:Users):Observable<Users>{
+    return this.http.post<Users>(`${APIURL}`,user);
+  }
 }

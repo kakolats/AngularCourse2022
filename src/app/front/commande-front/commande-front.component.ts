@@ -10,6 +10,8 @@ import { CommandeService } from 'src/app/shared/services/commande.service';
   styleUrls: ['./commande-front.component.css']
 })
 export class CommandeFrontComponent implements OnInit {
+  start:Date=new Date();
+  end:Date=new Date();
   user:Users|null=null;
   commandes:Commandes[]=[];
   commandeId:Commandes|null=null;
