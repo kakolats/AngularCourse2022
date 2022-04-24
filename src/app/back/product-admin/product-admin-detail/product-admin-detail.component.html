@@ -1,0 +1,25 @@
+<section class="py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" [src]="product?.pathImg" alt="..." /></div>
+            <div class="col-md-6">
+                <div class="small mb-1">{{product?.categorie?.name}}</div>
+                <h1 class="display-5 fw-bolder">{{product?.name}}</h1>
+                <div class="fs-5 mb-5">
+                    <span *ngIf="product?.isSolde" class="text-muted text-decoration-line-through">{{product?.oldPrice}}</span>
+                            
+                            <ng-container *ngIf="product?.isSolde; then isSolde else notSolde"></ng-container>
+                                <ng-template #isSolde>
+                                    {{product?.newPrice}}
+                                </ng-template>
+                                <ng-template #notSolde>
+                                    {{product?.oldPrice}}
+                            </ng-template>
+                </div>
+                <p class="lead">{{product?.description}}</p>
+                <div class="d-flex">
+                </div>
+            </div>
+        </div>
+    </div>
+ </section>
