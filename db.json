@@ -7,6 +7,14 @@
     {
       "id": 2,
       "name": "Categorie 2"
+    },
+    {
+      "name": "Vetements",
+      "id": 3
+    },
+    {
+      "name": "Cosmétiques",
+      "id": 4
     }
   ],
   "products": [
@@ -81,6 +89,17 @@
       "isSolde": false,
       "categorieId": 2,
       "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img6.webp"
+    },
+    {
+      "name": "Test",
+      "description": "Ceci est un test",
+      "oldPrice": "5000",
+      "qteStock": "5",
+      "qteSeuil": "2",
+      "categorie": "[object Object]",
+      "isSolde": false,
+      "pathImg": "https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp",
+      "id": 7
     }
   ],
   "users": [
@@ -197,7 +216,7 @@
     {
       "date": "26-02-2022",
       "mntTotal": 5000,
-      "isPayed": false,
+      "isPayed": true,
       "isLivred": false,
       "clientId": 2,
       "client": {

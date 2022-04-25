@@ -3,19 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { CategorieAdminRoutingModule } from './categorie-admin-routing.module';
 import { CategorieAdminComponent } from './categorie-admin.component';
-import { CategorieAdminListComponent } from './categorie-admin-list/categorie-admin-list.component';
-import { CategorieAdminNewComponent } from './categorie-admin-new/categorie-admin-new.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
-    CategorieAdminComponent,
-    CategorieAdminListComponent,
-    CategorieAdminNewComponent
+    CategorieAdminComponent
   ],
   imports: [
     CommonModule,
-    CategorieAdminRoutingModule
+    CategorieAdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class CategorieAdminModule { }

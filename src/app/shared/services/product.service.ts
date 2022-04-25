@@ -11,7 +11,10 @@ const APIURL=`${environment.api}/products`;
 export class ProductService {
 
   constructor(private http:HttpClient) { }
-  
+
+  addProduct(product:Products){
+    return this.http.post<Products>(APIURL,product);
+  }
 
   getProducts():Observable<Products[]>{
     return this.http.get<Products[]>(APIURL);

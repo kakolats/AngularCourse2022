@@ -16,7 +16,15 @@ export class CategorieService {
   getCategories():Observable<Categories[]>{
     return this.http.get<Categories[]>(APIURL);
   }
-  getCategoriesById(){
-    
+  getCategoriesById(idCat:number){
+    return this.http.get<Categories[]>(`${APIURL}/${idCat}`);
+  }
+
+  addCategorie(categorie:Categories){
+    return this.http.post<Categories>(APIURL,categorie);
+  }
+
+  updateCategorie(categorie:Categories){
+    return this.http.put<Categories>(`${APIURL}/${categorie.id}`,categorie)
   }
 }

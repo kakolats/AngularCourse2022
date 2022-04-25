@@ -6,7 +6,7 @@ import { ProductAdminComponent } from './product-admin.component';
 import { ProductAdminNewComponent } from './product-admin-new/product-admin-new.component';
 import { ProductAdminDetailComponent } from './product-admin-detail/product-admin-detail.component';
 import { ProductAdminListByCategorieComponent } from './product-admin-list-by-categorie/product-admin-list-by-categorie.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,9 @@ import { ProductAdminListByCategorieComponent } from './product-admin-list-by-ca
   ],
   imports: [
     CommonModule,
-    ProductAdminRoutingModule
+    ProductAdminRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class ProductAdminModule { }

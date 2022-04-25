@@ -1,0 +1,18 @@
+<input class="form-control" type="text" placeholder=""
+        formControlName="categorie"
+        [ngClass]="{
+            'is-valid':model.get('categorie').valid && (model.get('categorie').touched||model.get('categorie').dirty),
+            'is-invalid':model.get('categorie').invalid && (model.get('categorie').touched||model.get('categorie').dirty)
+        }">
+        <label for="inputEmail">Prix</label>
+        <div class="text-danger mt-2" *ngIf="model.get('categorie').invalid && (model.get('categorie').touched||model.get('categorie').dirty)">
+            <span *ngIf="model.get('categorie').errors['required']">Le champ est obligatoire</span>
+        </div>
+
+        <select class="form-select" aria-label="Default select example"
+        formControlName="categorie">
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        <label for="inputEmail">Categorie</label>
